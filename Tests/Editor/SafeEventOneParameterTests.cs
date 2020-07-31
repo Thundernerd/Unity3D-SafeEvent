@@ -5,6 +5,7 @@ public class SafeEventOneParameterTests
 {
     private void Dummy(int arg)
     {
+        // Left blank on purpose
     }
 
     [Test]

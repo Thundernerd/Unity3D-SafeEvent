@@ -2,12 +2,12 @@
 
 public class DummyBehaviour : MonoBehaviour
 {
-    public bool Invoked { get; private set; } = false;
+    public bool Invoked { get; private set; }
 
-    public int Obj { get; private set; } = 0;
+    public int Obj { get; private set; }
 
-    public int Arg1 { get; private set; } = 0;
-    public int Arg2 { get; private set; } = 0;
+    public int Arg1 { get; private set; }
+    public int Arg2 { get; private set; }
 
     public void Dummy()
     {

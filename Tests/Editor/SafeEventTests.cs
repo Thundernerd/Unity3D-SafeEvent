@@ -5,6 +5,7 @@ public class SafeEventTests
 {
     private void Dummy()
     {
+        // Left blank on purpose
     }
 
     [Test]
