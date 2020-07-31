@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TNRD.Events
 {
-    public struct SafeEvent<T, T2>
+    public struct SafeEvent<T, T2> : IEquatable<SafeEvent<T, T2>>
     {
         private HashSet<Action<T, T2>> subscriptions;
 
@@ -77,6 +77,21 @@ namespace TNRD.Events
         {
             safeEvent.Unsubscribe(action);
             return safeEvent;
+        }
+
+        public bool Equals(SafeEvent<T, T2> other)
+        {
+            return Equals(subscriptions, other.subscriptions);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is SafeEvent<T, T2> other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return (subscriptions != null ? subscriptions.GetHashCode() : 0);
         }
     }
 }
