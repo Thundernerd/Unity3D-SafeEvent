@@ -1,8 +1,12 @@
 # Changelog
 
 ## [1.1.0] - 2020-08-01
-- Updated readme
-- Added test case
+
+### Added
+- Test case
+
+### Updated
+- Readme
 
 ## [1.0.0] - 2020-07-31
 
