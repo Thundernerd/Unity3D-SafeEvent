@@ -127,6 +127,23 @@ private void InvokeEvent()
 }
 ```
 
+### Exposing
+
+Now that you've set up your Safe Event you most likely want to be able to use it from a different place.
+
+The recommended way of doing this is by exposing an event property as shown below, instead of directly exposing the Safe Event
+
+```c#
+private SafeEvent<int> onFooEvent;
+
+public event Action<int> OnFooEvent
+{
+    add => onFooEvent.Subscribe(value);
+    remove => onFooEvent.Unsubscribe(value);
+}
+```
+
+The benefit of this is that to the outside it looks and behaves like a normal event even though under the hood it has the benefits of the Safe Event.
 
 ## Support
 **Safe Event** is a small and open-source utility that I hope helps other people. It is by no means necessary but if you feel generous you can support me by donating.
