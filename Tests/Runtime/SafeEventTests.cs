@@ -71,4 +71,25 @@ public class SafeEventTests
         Assert.IsNotNull(exception);
         Object.Destroy(holder);
     }
+
+    [UnityTest]
+    public IEnumerator Dispatch_Exposed_Action()
+    {
+        var holder = new GameObject();
+        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        yield return null;
+
+        bool invoked = false;
+
+        dummyBehaviour.OnExposedEvent += () =>
+        {
+            invoked = true;
+        };
+
+        Assert.IsFalse(invoked);
+        dummyBehaviour.DispatchOnExposedEvent();
+        Assert.IsTrue(invoked);
+
+        Object.Destroy(holder);
+    }
 }
