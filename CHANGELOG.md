@@ -1,9 +1,12 @@
 # Changelog
 
-## [1.0.1] - 2020-08-19
+## [1.1.0] - 2020-08-01
 
-### Fixed
-- Null reference exception
+### Added
+- Test case
+
+### Updated
+- Readme
 
 ## [1.0.0] - 2020-07-31
 
