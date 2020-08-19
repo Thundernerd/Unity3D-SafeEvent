@@ -12,11 +12,14 @@ namespace TNRD.Events
 
         public void RemoveAllSubscriptions()
         {
-            subscriptions.Clear();
+            subscriptions?.Clear();
         }
 
         public void Invoke(T arg1, T2 arg2)
         {
+            if (subscriptions == null)
+                return;
+
             foreach (var subscription in subscriptions)
             {
 #if UNITY_EDITOR || DEBUG
