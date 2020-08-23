@@ -9,8 +9,8 @@ public class SafeEventOneParameterTests
     [Test]
     public void Invoke_On_Behaviour()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
 
         SafeEvent<int> sf;
         sf.Subscribe(dummyBehaviour.Dummy);
@@ -25,8 +25,8 @@ public class SafeEventOneParameterTests
     [UnityTest]
     public IEnumerator Invoke_On_Destroyed_Behaviour()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
 
         SafeEvent<int> sf;
         sf.Subscribe(dummyBehaviour.Dummy);
@@ -51,8 +51,8 @@ public class SafeEventOneParameterTests
     [UnityTest]
     public IEnumerator Invoke_On_Destroyed_GameObject()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
 
         SafeEvent<int> sf;
         sf.Subscribe(dummyBehaviour.Dummy);
