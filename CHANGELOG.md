@@ -2,10 +2,10 @@
 
 ## [1.1.2] - 2020-08-23
 
-###Added
+### Added
 - Hiding warning 162 with pragma
 
-###Updated
+### Updated
 - var to explicit type
 - author name to TNRD
 
