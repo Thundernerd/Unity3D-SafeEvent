@@ -9,8 +9,8 @@ public class SafeEventTests
     [Test]
     public void Invoke_On_Behaviour()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
 
         SafeEvent sf;
         sf.Subscribe(dummyBehaviour.Dummy);
@@ -23,8 +23,8 @@ public class SafeEventTests
     [UnityTest]
     public IEnumerator Invoke_On_Destroyed_Behaviour()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
 
         SafeEvent sf;
         sf.Subscribe(dummyBehaviour.Dummy);
@@ -49,8 +49,8 @@ public class SafeEventTests
     [UnityTest]
     public IEnumerator Invoke_On_Destroyed_GameObject()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
 
         SafeEvent sf;
         sf.Subscribe(dummyBehaviour.Dummy);
@@ -75,8 +75,8 @@ public class SafeEventTests
     [UnityTest]
     public IEnumerator Dispatch_Exposed_Action()
     {
-        var holder = new GameObject();
-        var dummyBehaviour = holder.AddComponent<DummyBehaviour>();
+        GameObject holder = new GameObject();
+        DummyBehaviour dummyBehaviour = holder.AddComponent<DummyBehaviour>();
         yield return null;
 
         bool invoked = false;

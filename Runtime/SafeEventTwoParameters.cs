@@ -20,7 +20,7 @@ namespace TNRD.Events
             if (subscriptions == null)
                 return;
 
-            foreach (var subscription in subscriptions)
+            foreach (Action<T, T2> subscription in subscriptions)
             {
 #if UNITY_EDITOR || DEBUG
                 ThrowIfInvalidSubscription(subscription);
@@ -59,7 +59,9 @@ namespace TNRD.Events
 #if UNITY_EDITOR || DEBUG
                 throw new DuplicateSubscriptionException();
 #endif
+#pragma warning disable 162
                 return;
+#pragma warning restore 162
             }
 
             subscriptions.Add(action);

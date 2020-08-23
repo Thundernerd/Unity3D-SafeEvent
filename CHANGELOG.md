@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.2] - 2020-08-23
+
+###Added
+- Hiding warning 162 with pragma
+
+###Updated
+- var to explicit type
+- author name to TNRD
+
 ## [1.1.1] - 2020-08-19
 
 ### Fixed
