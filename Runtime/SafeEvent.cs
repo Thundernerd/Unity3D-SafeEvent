@@ -19,8 +19,10 @@ namespace TNRD.Events
         {
             if (subscriptions == null)
                 return;
-            
-            foreach (Action subscription in subscriptions)
+
+            HashSet<Action> subscriptionsCopy = new HashSet<Action>(subscriptions);
+
+            foreach (Action subscription in subscriptionsCopy)
             {
 #if UNITY_EDITOR || DEBUG
                 ThrowIfInvalidSubscription(subscription);
