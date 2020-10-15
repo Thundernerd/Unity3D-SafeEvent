@@ -33,19 +33,19 @@ namespace TNRD.Events
 
         private static void ThrowIfInvalidSubscription(Action<T> subscription)
         {
-            if (subscription?.Target == null)
+            if (subscription == null)
             {
                 throw new SubscriptionIsNullException();
             }
 
-            if (subscription.Target is Component component && !component)
+            switch (subscription.Target)
             {
-                throw new SubscriptionIsNullException();
-            }
-
-            if (subscription.Target is GameObject gameObject && !gameObject)
-            {
-                throw new SubscriptionIsNullException();
+                case null when !subscription.Method.IsStatic:
+                    throw new SubscriptionIsNullException();
+                case Component component when !component:
+                    throw new SubscriptionIsNullException();
+                case GameObject gameObject when !gameObject:
+                    throw new SubscriptionIsNullException();
             }
         }
 

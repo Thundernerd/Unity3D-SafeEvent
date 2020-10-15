@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.1] - 2020-10-15
+
+### Fixed
+- Incorrectly trowing SubscriptionIsNullException when a method is static
+
 ## [1.2.0] - 2020-09-02
 
 ### Updated
