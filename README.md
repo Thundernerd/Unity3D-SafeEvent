@@ -23,10 +23,10 @@ It will notify you when you've subscribed more than once with the same callback.
 ```
 openupm add net.tnrd.safeevent
 ```
-2. You can also install via git url by adding these entries in your **manifest.json**
-```json
-"net.tnrd.safeevent": "https://github.com/Thundernerd/Unity3D-SafeEvent.git",
-```
+
+2. Installing through a [Unity Package](http://package-installer.glitch.me/v1/installer/package.openupm.com/net.tnrd.safeevent?registry=https://package.openupm.com) created by the [Package Installer Creator](https://package-installer.glitch.me) from [Needle](https://needle.tools)
+
+[<img src="https://img.shields.io/badge/-Download-success?style=for-the-badge"/>](http://package-installer.glitch.me/v1/installer/package.openupm.com/net.tnrd.safeevent?registry=https://package.openupm.com)
 
 ## Usage
 
